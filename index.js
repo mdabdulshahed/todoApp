@@ -7,7 +7,7 @@ const ToDo = require("./routes.js");
 dotenv.config();
 
 const app = express();
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: 'https://mynotionapp.herokuapp.com', credentials: true }));
 app.use(express.json({ extended: true }));
 app.use(express.static("public"));
 
