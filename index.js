@@ -4,7 +4,7 @@ const connectToDB = require("./dataBase.js");
 const cors = require("cors");
 const ToDo = require("./routes.js");
 
-dotenv.config();
+dotenv.config()
 
 const app = express();
 app.use(cors({ origin: '*', credentials: true }));
