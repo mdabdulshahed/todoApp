@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const connectToDB = require("./dataBase.js");
 const cors = require("cors");
 const ToDo = require("./routes.js");
+const path = require('path')
 
 dotenv.config()
 
@@ -39,7 +40,7 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("success");
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 app.use("/todo", ToDo);
